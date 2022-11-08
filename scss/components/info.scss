@@ -1,0 +1,94 @@
+@use '../abstracts/variables';
+
+.secondSection {
+    width: 100%;
+    max-width: 135rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+
+
+    &__h2 {
+        font-size: 2.4rem;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__p {
+        font-size: 1.9rem;
+        margin: 1.5rem 0 0;
+    }
+
+    &__gameNames{
+        display: flex;
+        list-style: none;
+        gap: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #808080;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__gamebox{
+        display: block;
+        margin-bottom: 3.2rem;
+        border: 1px solid #bcc3c8;
+        padding: 3.2rem;
+        padding-top: 2.5rem;
+    }
+}
+
+//// Wordt aangepast 
+
+.gamebox__title{
+    font-size: 2.4rem;
+    font-family: map-get(variables.$fontVars, 'SansFont');
+}
+
+.gamebox__info{
+    overflow: hidden;
+    margin-bottom: 2rem;
+    max-width: 80rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.gamebox__btn{
+  background-color: transparent;
+  border: 0.2rem solid #1A1A1A;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 6rem;
+  outline: none;
+  padding: 1.7rem 2.4rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  touch-action: manipulation;
+  width: 20rem;
+  will-change: transform;
+}
+
+.gamebox__btn:disabled{
+  pointer-events: none;
+}
+
+.gamebox__btn:hover{
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.gamebox__btn:active{
+  box-shadow: none;
+  transform: translateY(0);
+}

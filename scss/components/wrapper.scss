@@ -1,0 +1,38 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.thirdSection {
+    
+    &__figureWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 6.4rem;
+        background: #f3f8fb;
+        position: relative;
+        padding: 2.4rem 0;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__itemWrapper {
+        font-weight: 600;
+        line-height: 1.4;
+        font-size: 1.6rem;
+        color: #1c1d1f;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    &__icon {
+        background: #d7e1e8;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        @include mixins.flexCenter;
+    }
+
+    &__textWrapper {
+        max-width: 28.8rem;
+    }
+}
