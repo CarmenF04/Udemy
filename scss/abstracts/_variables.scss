@@ -1,13 +1,18 @@
-$backgroundColor: #4649FF;
-
 $fontVars: (
     "color": #000000,
     "fancyFont": 'Playfair Display',
     "SansFont": 'Open Sans',
 );
 
-$tasksVars: (
-    "background":#DDDDDD,
-    "specialFontColor": #eee,
-    "listItemColor": #ECECEC
+$colorVars: (
+    "background": #fff,
+
+    "textColor": #0000,
+);
+
+$fontSize: (
+    "fontsize1": 2.4rem,
+    "fontsize2": 1.9rem,
+    "fontsize3": 1.6rem,
+    "fontsize4": 1.4rem,
 );

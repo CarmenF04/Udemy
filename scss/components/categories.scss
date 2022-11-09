@@ -1,0 +1,73 @@
+@use '../abstracts/variables';
+@use "../abstracts/mixins";
+
+.fifthSection {
+    margin-top: 6.4rem;
+    background: #f4f4f4;
+
+    &__section {
+        padding: 6.4rem 2.4rem;
+        width: 100%;
+        max-width: 134rem;
+        @include mixins.marginLR;
+    }
+
+    &__h2 {
+        margin-bottom: 2.4rem;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+        font-size: 2rem;
+    }
+
+    &__itemBigWrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__itemWrapper {
+        margin-bottom: 2.4rem;
+        padding-right: 5rem;
+    }
+
+    &__itemStudentWrapper {
+        padding-bottom: 2rem;
+    }
+
+    &__h3 {
+        font-size: 2rem;
+        max-width: 60rem;
+        margin-bottom: 2.4rem;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__a {
+        text-decoration: underline;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: rgb(115, 0, 255);
+    }
+
+    &__p {
+        font-size: 1.4rem;
+        color: #6a6f73;
+        margin-top: 0.8rem;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__button {
+        text-align: center;
+        text-decoration: none;
+        @include mixins.flexCenter;
+        background: none;
+        border: 1px solid #000000;
+        padding: 0 1.4rem;
+        height: 4rem;
+        font-weight: 600;
+
+        &:hover {
+            background: darken(#f7f9fa, 3%);
+            cursor: pointer;
+        }
+    }
+}

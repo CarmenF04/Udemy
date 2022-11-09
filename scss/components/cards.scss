@@ -1,12 +1,11 @@
 @use '../abstracts/variables';
+@use "../abstracts/mixins";
 
 .fourthSection{
     width: 100%;
     max-width: 140rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
+    @include mixins.marginLR;
+    @include mixins.paddingLR;
     display: flex;
 
     &__section {
@@ -41,7 +40,7 @@
         text-decoration: none;
         background: #fff;
       }
-
+      
       &__background{
         background-image: linear-gradient(#ffffff, #f3f8fb);
         border-radius: 30px;
@@ -83,7 +82,7 @@
         font-weight: 900;
         left: 15rem;
         bottom: 26%;
-        font-size: 1.6rem;
+        font-size: map-get(variables.$fontSize, 'fontsize3');
         width: 25ch;
         border-bottom: 0.1rem solid #1a1a1a28;
       }

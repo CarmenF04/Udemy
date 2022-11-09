@@ -1,0 +1,16 @@
+@media screen and (max-width:1500px) {
+    .header{
+        flex-grow: 1;
+    }
+
+    .header__img{
+        display: none;
+    }
+
+    .firstSection {
+        &__wrapper {
+            left: 20rem;
+            top: 16rem;
+        }
+    }
+}

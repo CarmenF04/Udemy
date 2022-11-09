@@ -1,0 +1,30 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.sixthSection{
+    width: 100%;
+    max-width: 135rem;
+    @include mixins.marginLR;
+    @include mixins.paddingLR;
+
+    &__h2{
+        @include mixins.flexCenter;
+        font-size: 2.5rem;
+        font-family: map-get(variables.$fontVars, 'SansFont');
+        padding-top: 8rem;
+    }
+
+    &__p{
+        @include mixins.flexCenter;
+        font-size: map-get(variables.$fontSize, 'fontsize3');
+        font-family: map-get(variables.$fontVars, 'SansFont');
+        padding-top: 1rem;
+    }
+
+    &__teams{
+        list-style: none;
+        @include mixins.flexCenter;
+        padding-top: 2.5rem;
+        gap: 15rem;
+    }
+}

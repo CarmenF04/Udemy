@@ -1,0 +1,55 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.seventhSection{
+    width: 100%;
+    max-width: 135rem;
+    @include mixins.marginLR;
+    padding-right: 4.3rem;
+    padding-left: 4.3rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+
+    &__logo{
+        width: 22rem;
+        list-style: none;
+        padding-bottom: 6rem;
+    }
+
+    &__wrapper{
+        width: 100%;
+        height: 60rem;
+        background: #ffffff;
+        @include mixins.flexCenter;
+        padding: 4rem;
+        flex-direction: column;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+
+    &__h2{
+        @include mixins.flexCenter;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    &__h3{
+        @include mixins.flexCenter;
+        font-size: 3.5rem;
+        padding-top: 3rem;
+    }
+
+    &__h4{
+        @include mixins.flexCenter;
+        font-size: map-get(variables.$fontSize, 'fontsize3');
+        padding-top: 3rem;
+        width: 20;
+        text-align: center;
+    }
+
+    &__text{
+        padding-top: 1.5rem;
+        font-size: map-get(variables.$fontSize, 'fontsize3');
+        list-style: none;
+    }
+}

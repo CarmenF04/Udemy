@@ -3,3 +3,13 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin paddingLR{
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+}
+
+@mixin marginLR{
+    margin-right: auto;
+    margin-left: auto;
+}
