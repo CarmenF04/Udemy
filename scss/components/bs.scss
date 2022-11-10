@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
-.seventhSection{
+.seventhSection {
     width: 100%;
     max-width: 135rem;
     @include mixins.marginLR;
@@ -10,13 +10,12 @@
     padding-top: 5rem;
     padding-bottom: 4rem;
 
-    &__logo{
+    &__logo {
         width: 22rem;
         list-style: none;
-        padding-bottom: 6rem;
     }
 
-    &__wrapper{
+    &__wrapper {
         width: 100%;
         height: 60rem;
         background: #ffffff;
@@ -27,19 +26,19 @@
         font-family: map-get(variables.$fontVars, 'SansFont');
     }
 
-    &__h2{
+    &__h2 {
         @include mixins.flexCenter;
         font-size: 3.5rem;
         text-align: center;
     }
 
-    &__h3{
+    &__h3 {
         @include mixins.flexCenter;
         font-size: 3.5rem;
         padding-top: 3rem;
     }
 
-    &__h4{
+    &__h4 {
         @include mixins.flexCenter;
         font-size: map-get(variables.$fontSize, 'fontsize3');
         padding-top: 3rem;
@@ -47,9 +46,29 @@
         text-align: center;
     }
 
-    &__text{
+    &__text {
         padding-top: 1.5rem;
         font-size: map-get(variables.$fontSize, 'fontsize3');
         list-style: none;
     }
+}
+
+@media screen and (max-width:1500px) {
+    .seventhSection {
+        flex-direction: column;
+
+        &__wrapper {
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+
+        &__h2 {
+            flex-wrap: wrap;
+        }
+
+        &__h3 {
+            flex-wrap: wrap;
+        }
+    }
+
 }

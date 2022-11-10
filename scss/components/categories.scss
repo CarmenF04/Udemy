@@ -43,9 +43,9 @@
     &__a {
         text-decoration: underline;
         font-family: map-get(variables.$fontVars, 'SansFont');
-        font-size: 1.4rem;
+        font-size: map-get(variables.$fontSize, 'fontsize4');
         font-weight: 600;
-        color: rgb(115, 0, 255);
+        color: #7300ff;
     }
 
     &__p {

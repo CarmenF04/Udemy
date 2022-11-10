@@ -28,3 +28,9 @@
         gap: 15rem;
     }
 }
+
+@media screen and (max-width:1500px) {
+    .sixthSection{
+        flex-wrap: wrap;
+    }
+}

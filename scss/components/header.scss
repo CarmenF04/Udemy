@@ -31,7 +31,7 @@
         display: flex;
         align-items: center;
         height: 100%;
-        width: 100%;
+        width: 8rem;
         min-width: 50%;
         padding: 1.2rem;
         border-radius: 10rem;
@@ -117,4 +117,27 @@
         }
     }
 
+}
+
+@media screen and (max-width:1500px) {
+
+    .header{
+    
+        &__textItem{
+            display: none;
+        }
+
+        &__searchbar{
+            display: none;
+        }
+
+        &__logIn{
+            flex-grow: 1;
+            gap: 0;
+        }
+
+        &__signUp{
+            flex-grow: 1;
+        }
+    }
 }
