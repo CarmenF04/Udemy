@@ -56,17 +56,36 @@
     }
 
     &__button {
+        background-color: transparent;
+        border: 0.2rem solid #1A1A1A;
+        box-sizing: border-box;
+        color: map-get(variables.$colorVars, 'black');
+        cursor: pointer;
+        display: inline-block;
+        font-size: map-get(variables.$fontSize, 'fontsize3');
+        font-weight: 600;
+        line-height: normal;
+        min-height: 6rem;
+        outline: none;
+        padding: 1.7rem 2.4rem;
         text-align: center;
         text-decoration: none;
-        @include mixins.flexCenter;
-        background: none;
-        border: 0.1rem solid #000000;
-        padding: 0 1.4rem;
-        height: 4rem;
-        font-weight: 600;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        touch-action: manipulation;
+        width: 20rem;
+        will-change: transform;
 
         &:hover {
-            cursor: pointer;
+            color: map-get(variables.$colorVars, 'white');
+            background-color: #1A1A1A;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 0.8rem 1.5rem;
+            transform: translateY(-0.2rem);
+        }
+
+        &:active {
+            box-shadow: none;
+            transform: translateY(0);
         }
     }
 }
