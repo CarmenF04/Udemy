@@ -13,3 +13,8 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+@mixin flexCenterLite{
+    display: flex;
+    justify-content: center;
+}

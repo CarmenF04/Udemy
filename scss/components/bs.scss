@@ -18,23 +18,23 @@
     &__wrapper {
         width: 100%;
         height: 60rem;
-        background: #ffffff;
+        background: map-get(variables.$colorVars, 'background');
         @include mixins.flexCenter;
         padding: 4rem;
         flex-direction: column;
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.3);
         font-family: map-get(variables.$fontVars, 'SansFont');
     }
 
     &__h2 {
         @include mixins.flexCenter;
-        font-size: 3.5rem;
+        font-size: map-get(variables.$fontSize, 'fontsize0');
         text-align: center;
     }
 
     &__h3 {
         @include mixins.flexCenter;
-        font-size: 3.5rem;
+        font-size: map-get(variables.$fontSize, 'fontsize0');
         padding-top: 3rem;
     }
 

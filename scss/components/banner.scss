@@ -3,12 +3,10 @@
 
 .firstSection {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include mixins.flexCenter;
 
     &__section {
-        display: flex;
-        justify-content: center;
+        @include mixins.flexCenterLite;
         max-width: 134rem;
         margin-bottom: 4.8rem;
     }
@@ -16,31 +14,72 @@
     &__banner {
         width: 100%;
         padding-top: 2rem;
-        margin-bottom: 0;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.4rem 0.6rem -0.1rem, rgba(0, 0, 0, 0.06) 0rem 0.2rem 0.4rem -0.1rem;
         @include mixins.flexCenter;
     }
 
-    &__text {
+    &__textWrapper {
         position: absolute;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding: 2.4rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 0.3rem 0.8rem;
         left: 25rem;
         top: 16rem;
+        padding: 2.5rem;
         max-width: 40rem;
         flex-direction: column;
         @include mixins.flexCenter;
     }
 
-
     &__h2 {
-        font-size: 3.2rem;
-        font-family: map-get(variables.$fontVars, 'fancyFont');
-
+        font-size: map-get(variables.$fontSize, 'fontsize0');
+        font-family: map-get(variables.$fontVars, 'SansFont');
     }
 
     &__p {
-        font-size: 1.9rem;
+        font-size: map-get(variables.$fontSize, 'fontsize2');
         font-family: map-get(variables.$fontVars, 'SansFont');
+    }
+}
+
+@media screen and (max-width:1500px) {
+    .firstSection {
+        &__textWrapper {
+            left: 20rem;
+            top: 16rem;
+        }
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .firstSection {
+        &__textWrapper {
+            left: 13rem;
+            top: 16rem;
+        }
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .firstSection {
+        &__textWrapper {
+            left: 8rem;
+            top: 16rem;
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .firstSection {
+        &__textWrapper {
+            left: 4rem;
+            top: 13rem;
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    .firstSection {
+        &__textWrapper {
+            display: none;
+        }
     }
 }

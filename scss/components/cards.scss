@@ -22,7 +22,7 @@
   height: 40rem;
   margin: 1rem;
   overflow: hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.3);
   font-family: map-get(variables.$fontVars, 'SansFont');
 
   &__img {
@@ -31,22 +31,22 @@
 
   &__btn {
     position: absolute;
-    color: #fff;
+    color: map-get(variables.$colorVars, 'black');
     right: 2.5rem;
     bottom: 5%;
     width: 15rem;
     height: 3.5rem;
-    border: 0.2rem solid #1a1a1ab5;
+    border: 0.2rem solid #000000b5;
     text-decoration: none;
-    background: #fff;
+    background: map-get(variables.$colorVars, 'background');
   }
 
   &__background {
     background-image: linear-gradient(#ffffff, #f3f8fb);
-    border-radius: 30px;
+    border-radius: 3rem;
     position: absolute;
     top: 55%;
-    left: -5px;
+    left: -0.5rem;
     height: 65%;
     width: 108%;
     transform: skew(19deg, -9deg);
@@ -56,12 +56,12 @@
     height: 8rem;
     width: 8rem;
     border-radius: 2rem;
-    background-color: #fff;
+    background: map-get(variables.$colorVars, 'background');
     position: absolute;
     bottom: 30%;
     left: 3rem;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.3rem 0.8rem;
   }
 
   &__Icon {
@@ -71,7 +71,6 @@
   &__rating {
     position: absolute;
     color: #e59819;
-    ;
     left: 3rem;
     bottom: 10%;
     font-size: 2rem;
@@ -79,7 +78,7 @@
 
   &__info {
     position: absolute;
-    color: #000000;
+    color: map-get(variables.$colorVars, 'black');
     font-weight: 900;
     left: 15rem;
     bottom: 26%;
@@ -92,22 +91,20 @@
     text-decoration: none;
     font-family: map-get(variables.$fontVars, 'SansFont');
     font-weight: 600;
-    color: #000000;
-  }
+    color: map-get(variables.$colorVars, 'black');
+    }
 }
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width:950px) {
   .fourthSection {
     flex-wrap: wrap;
   }
 
-  .gamecard {
-    &__rating {
-      display: none;
-    }
+  .gamecard{
+    flex-grow: 1;
 
-    &__info {
-      padding: 0;
+    &__rating{
+      display: none;
     }
   }
 }

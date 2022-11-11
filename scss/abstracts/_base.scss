@@ -1,0 +1,11 @@
+@use "./mixins.scss";
+@use "./variables.scss";
+
+body {
+    background: map-get(variables.$colorVars, 'background');
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}

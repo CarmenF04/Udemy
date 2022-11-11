@@ -1,3 +1,12 @@
+body {
+  background: #fff;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
@@ -23,12 +32,16 @@ html {
   width: 8.5rem;
   list-style: none;
 }
+.header__logo:hover {
+  cursor: pointer;
+}
 .header__textItem {
   font-size: 1.4rem;
   white-space: nowrap;
 }
 .header__textItem:hover {
   color: #5a585f;
+  cursor: pointer;
 }
 .header__searchbar {
   background-color: #f7f7f7;
@@ -51,9 +64,6 @@ html {
   width: 100%;
   height: 2.5rem;
 }
-.header__searchbarInput:focus {
-  outline: none;
-}
 .header__shoppingCart {
   font-size: 155%;
 }
@@ -62,6 +72,9 @@ html {
 }
 .header__iconCart {
   font-size: 130%;
+}
+.header__iconCart:hover {
+  cursor: pointer;
 }
 .header__iconGlobe {
   font-size: 190%;
@@ -83,7 +96,7 @@ html {
 .header__login {
   text-align: center;
   text-decoration: none;
-  background: white;
+  background: #fff;
   border: 0.1rem solid #000000;
   padding: 0 1.4rem;
   height: 4rem;
@@ -110,7 +123,6 @@ html {
   align-items: center;
 }
 .header__signIn:hover {
-  background: #000000;
   cursor: pointer;
 }
 
@@ -118,21 +130,38 @@ html {
   .header__textItem {
     display: none;
   }
-  .header__searchbar {
+}
+@media screen and (max-width: 1350px) {
+  .header__iconGlobe {
     display: none;
   }
-  .header__logIn {
-    flex-grow: 1;
-    gap: 0;
+}
+@media screen and (max-width: 1250px) {
+  .header__iconCart {
+    display: none;
   }
-  .header__signUp {
-    flex-grow: 1;
+}
+@media screen and (max-width: 1150px) {
+  .header__textItem {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header .header__searchbar {
+    display: none;
+  }
+  .header .header__textItem {
+    display: none;
   }
 }
 .firstSection {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .firstSection__section {
   display: flex;
@@ -143,18 +172,17 @@ html {
 .firstSection__banner {
   width: 100%;
   padding-top: 2rem;
-  margin-bottom: 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.4rem 0.6rem -0.1rem, rgba(0, 0, 0, 0.06) 0rem 0.2rem 0.4rem -0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.firstSection__text {
+.firstSection__textWrapper {
   position: absolute;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 2.4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0.3rem 0.8rem;
   left: 25rem;
   top: 16rem;
+  padding: 2.5rem;
   max-width: 40rem;
   flex-direction: column;
   display: flex;
@@ -162,14 +190,43 @@ html {
   align-items: center;
 }
 .firstSection__h2 {
-  font-size: 3.2rem;
-  font-family: "Playfair Display";
+  font-size: 3.5rem;
+  font-family: "Open Sans";
 }
 .firstSection__p {
   font-size: 1.9rem;
   font-family: "Open Sans";
 }
 
+@media screen and (max-width: 1500px) {
+  .firstSection__textWrapper {
+    left: 20rem;
+    top: 16rem;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .firstSection__textWrapper {
+    left: 13rem;
+    top: 16rem;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .firstSection__textWrapper {
+    left: 8rem;
+    top: 16rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .firstSection__textWrapper {
+    left: 4rem;
+    top: 13rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .firstSection__textWrapper {
+    display: none;
+  }
+}
 .secondSection {
   width: 100%;
   max-width: 135rem;
@@ -220,7 +277,7 @@ html {
   background-color: transparent;
   border: 0.2rem solid #1A1A1A;
   box-sizing: border-box;
-  color: #3B3B3B;
+  color: #000000;
   cursor: pointer;
   display: inline-block;
   font-size: 1.6rem;
@@ -248,6 +305,11 @@ html {
   transform: translateY(0);
 }
 
+@media screen and (max-width: 1500px) {
+  .secondSection__gameNames {
+    flex-wrap: wrap;
+  }
+}
 .thirdSection__figureWrapper {
   display: flex;
   align-items: center;
@@ -308,7 +370,7 @@ html {
   height: 40rem;
   margin: 1rem;
   overflow: hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.3);
   font-family: "Open Sans";
 }
 .gamecard__img {
@@ -316,21 +378,21 @@ html {
 }
 .gamecard__btn {
   position: absolute;
-  color: #fff;
+  color: #000000;
   right: 2.5rem;
   bottom: 5%;
   width: 15rem;
   height: 3.5rem;
-  border: 0.2rem solid rgba(26, 26, 26, 0.7098039216);
+  border: 0.2rem solid rgba(0, 0, 0, 0.7098039216);
   text-decoration: none;
   background: #fff;
 }
 .gamecard__background {
   background-image: linear-gradient(#ffffff, #f3f8fb);
-  border-radius: 30px;
+  border-radius: 3rem;
   position: absolute;
   top: 55%;
-  left: -5px;
+  left: -0.5rem;
   height: 65%;
   width: 108%;
   transform: skew(19deg, -9deg);
@@ -339,12 +401,12 @@ html {
   height: 8rem;
   width: 8rem;
   border-radius: 2rem;
-  background-color: #fff;
+  background: #fff;
   position: absolute;
   bottom: 30%;
   left: 3rem;
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0rem 0.3rem 0.8rem;
 }
 .gamecard__Icon {
   height: 100%;
@@ -373,15 +435,15 @@ html {
   color: #000000;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 950px) {
   .fourthSection {
     flex-wrap: wrap;
   }
+  .gamecard {
+    flex-grow: 1;
+  }
   .gamecard__rating {
     display: none;
-  }
-  .gamecard__info {
-    padding: 0;
   }
 }
 .fifthSection {
@@ -398,7 +460,7 @@ html {
 .fifthSection__h2 {
   margin-bottom: 2.4rem;
   font-family: "Open Sans";
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 .fifthSection__itemBigWrapper {
   display: flex;
@@ -409,11 +471,11 @@ html {
   margin-bottom: 2.4rem;
   padding-right: 5rem;
 }
-.fifthSection__itemStudentWrapper {
+.fifthSection__itemWrapper {
   padding-bottom: 2rem;
 }
 .fifthSection__h3 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   max-width: 60rem;
   margin-bottom: 2.4rem;
   font-family: "Open Sans";
@@ -438,13 +500,12 @@ html {
   justify-content: center;
   align-items: center;
   background: none;
-  border: 1px solid #000000;
+  border: 0.1rem solid #000000;
   padding: 0 1.4rem;
   height: 4rem;
   font-weight: 600;
 }
 .fifthSection__button:hover {
-  background: #eef2f4;
   cursor: pointer;
 }
 
@@ -473,16 +534,16 @@ html {
   padding-top: 1rem;
 }
 .sixthSection__teams {
-  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  list-style: none;
   padding-top: 2.5rem;
   gap: 15rem;
 }
 
 @media screen and (max-width: 1500px) {
-  .sixthSection {
+  .sixthSection__teams {
     flex-wrap: wrap;
   }
 }
@@ -503,13 +564,13 @@ html {
 .seventhSection__wrapper {
   width: 100%;
   height: 60rem;
-  background: #ffffff;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem;
   flex-direction: column;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.3);
   font-family: "Open Sans";
 }
 .seventhSection__h2 {
@@ -573,10 +634,10 @@ html {
   margin: 0;
   padding: 0;
   max-width: none;
-  flex-basis: 25.6rem;
   margin-right: 1.6rem;
   margin-bottom: 0;
   font-family: "Open Sans";
+  flex-basis: 25.6rem;
 }
 .footer__linkItem {
   justify-content: flex-start;
@@ -594,14 +655,13 @@ html {
   font-family: "Open Sans";
   color: #fff;
 }
-.footer__copyrightWrapper {
+.footer__copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6.4rem 0 3.2rem;
   font-size: 130%;
   font-family: "Open Sans";
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

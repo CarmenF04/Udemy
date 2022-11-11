@@ -22,8 +22,8 @@
     }
 
     &__teams{
-        list-style: none;
         @include mixins.flexCenter;
+        list-style: none;
         padding-top: 2.5rem;
         gap: 15rem;
     }
@@ -31,6 +31,8 @@
 
 @media screen and (max-width:1500px) {
     .sixthSection{
-        flex-wrap: wrap;
+        &__teams{
+            flex-wrap: wrap;
+        }
     }
 }

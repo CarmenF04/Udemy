@@ -15,7 +15,7 @@
     &__h2 {
         margin-bottom: 2.4rem;
         font-family: map-get(variables.$fontVars, 'SansFont');
-        font-size: 2rem;
+        font-size: map-get(variables.$fontSize, 'fontsize2');
     }
 
     &__itemBigWrapper {
@@ -29,12 +29,12 @@
         padding-right: 5rem;
     }
 
-    &__itemStudentWrapper {
+    &__itemWrapper {
         padding-bottom: 2rem;
     }
 
     &__h3 {
-        font-size: 2rem;
+        font-size: map-get(variables.$fontSize, 'fontsize2');
         max-width: 60rem;
         margin-bottom: 2.4rem;
         font-family: map-get(variables.$fontVars, 'SansFont');
@@ -49,7 +49,7 @@
     }
 
     &__p {
-        font-size: 1.4rem;
+        font-size: map-get(variables.$fontSize, 'fontsize4');
         color: #6a6f73;
         margin-top: 0.8rem;
         font-family: map-get(variables.$fontVars, 'SansFont');
@@ -60,13 +60,12 @@
         text-decoration: none;
         @include mixins.flexCenter;
         background: none;
-        border: 1px solid #000000;
+        border: 0.1rem solid #000000;
         padding: 0 1.4rem;
         height: 4rem;
         font-weight: 600;
 
         &:hover {
-            background: darken(#f7f9fa, 3%);
             cursor: pointer;
         }
     }

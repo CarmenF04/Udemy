@@ -9,7 +9,7 @@
   @include mixins.paddingLR;
 
   &__h2 {
-    font-size: 2.4rem;
+    font-size: map-get(variables.$fontSize, 'fontsize1');
     font-family: map-get(variables.$fontVars, 'SansFont');
   }
 
@@ -39,7 +39,7 @@
   padding-top: 2.5rem;
 
   &__title {
-    font-size: 2.4rem;
+    font-size: map-get(variables.$fontSize, 'fontsize1');
     font-family: map-get(variables.$fontVars, 'SansFont');
   }
 
@@ -55,7 +55,7 @@
     background-color: transparent;
     border: 0.2rem solid #1A1A1A;
     box-sizing: border-box;
-    color: #3B3B3B;
+    color: map-get(variables.$colorVars, 'black');
     cursor: pointer;
     display: inline-block;
     font-size: map-get(variables.$fontSize, 'fontsize3');
@@ -73,7 +73,7 @@
     will-change: transform;
 
     &:hover {
-      color: #fff;
+      color: map-get(variables.$colorVars, 'white');
       background-color: #1A1A1A;
       box-shadow: rgba(0, 0, 0, 0.25) 0 0.8rem 1.5rem;
       transform: translateY(-0.2rem);
@@ -83,5 +83,13 @@
       box-shadow: none;
       transform: translateY(0);
     }
+  }
+}
+
+@media screen and (max-width:1500px) {
+  .secondSection{
+      &__gameNames{
+          flex-wrap: wrap;
+      }
   }
 }

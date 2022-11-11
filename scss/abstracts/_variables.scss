@@ -1,18 +1,18 @@
 $fontVars: (
-    "color": #000000,
-    "fancyFont": 'Playfair Display',
     "SansFont": 'Open Sans',
 );
 
 $colorVars: (
     "background": #fff,
-
-    "textColor": #0000,
+    "black": #000000,
+    "borderColor": #000,
+    "white": #fff
 );
 
 $fontSize: (
+    "fontsize0": 3.5rem,
     "fontsize1": 2.4rem,
     "fontsize2": 1.9rem,
     "fontsize3": 1.6rem,
-    "fontsize4": 1.4rem,
+    "fontsize4": 1.4rem
 );

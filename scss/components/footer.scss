@@ -20,10 +20,10 @@
         margin: 0;
         padding: 0;
         max-width: none;
-        flex-basis: 25.6rem;
         margin-right: 1.6rem;
         margin-bottom: 0;
         font-family: map-get(variables.$fontVars, 'SansFont');
+        flex-basis: 25.6rem;
     }
 
     &__linkItem {
@@ -42,16 +42,16 @@
         font-size: 130%;
         text-decoration: none;
         font-family: map-get(variables.$fontVars, 'SansFont');
-        color: #fff;
+        color: map-get(variables.$colorVars, 'white');
     }
 
-    &__copyrightWrapper {
+    &__copyright {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 6.4rem 0 3.2rem;
         font-size: 130%;
         font-family: map-get(variables.$fontVars, 'SansFont');
-        color: #fff;
+        color: map-get(variables.$fontVars, 'white');
     }
 }
